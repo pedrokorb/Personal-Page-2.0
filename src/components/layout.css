@@ -6,6 +6,10 @@
   background: rgb(33, 150, 243) !important;
 }
 
+.main-bg{
+  background: linear-gradient(45deg, rgb(6, 12, 33), rgb(13, 1, 57));
+}
+
 .custom-text {
   background: -webkit-linear-gradient(45deg, #f441a5, #03a9f4);
   -webkit-background-clip: text;

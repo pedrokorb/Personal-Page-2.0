@@ -2,7 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import MainBanner from '../components/Banner/MainBanner'
+import ImageToRight from '../components/CallToActions/ImageToRight'
+import ImageToLeft from '../components/CallToActions/ImageToLeft'
 import Image from '../img/flames.jpg'
+import CTA1 from '../img/personalizado.svg'
+import CTA2 from '../img/responsive.svg'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -26,101 +30,30 @@ export const IndexPageTemplate = ({
       buttonText="Entrar em contato"
       buttonLink="www.google.com.br"
     />
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
-      </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <ImageToRight
+      title="Landing Pages"
+      subtitle={`Em uma tradução livre, página de aterrissagem. É uma página que tem o objetivo de fazer o usuário "aterrissar" e efetuar uma ação. Geralmente são utilizadas para obter informações do usuário, como e-mail por exemplo, ou vender algum produto.`}
+      image={CTA1}
+    />
+
+    <ImageToLeft
+      title="Sites Institucionais"
+      subtitle={`A vitrine do seu negócio ou empresa na internet. Um site institucional tem por ojetivo expôr e promover sua marca, produtos ou serviços e atrair mais clientes que geralmente não estão ao alcance físico.`}
+      image={CTA1}
+    />
+
+    <ImageToRight
+      title="Sistemas Web"
+      subtitle={`Esse tipo de sistema geralmente são desenvolvidos para facilitar e automatizar processos manuais, tornando-os mais simples, rápidos e escaláveis. Praticamente qualquer processo pode ser automatizado.`}
+      image={CTA1}
+    />
+
+    <ImageToLeft
+      title="Aplicativos"
+      subtitle={`Atualmente quase todas as pessoas possuem um dispositivo móvel. Transforme sua ideia em um aplicativo e alcance um número maior de pessoas.`}
+      image={CTA1}
+    />
+    
   </div>
 )
 

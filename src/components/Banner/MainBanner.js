@@ -1,6 +1,5 @@
 import React from "react"
 import ExternalButton from "../Button/ExternalButton"
-import { FaAngleDown } from 'react-icons/fa'
 import './MainBanner.css'
 
 const MainBanner = ({ 
@@ -38,13 +37,6 @@ const MainBanner = ({
         customBg
         rounded
       />
-
-      {/* <a className="mt-10" aria-label="Services" href="#services">
-        <FaAngleDown
-          className="bounce h-16 w-16 text-bannerTextPrimary"
-        />
-      </a> */}
-
     </div>
   )
 }

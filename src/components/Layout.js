@@ -10,7 +10,7 @@ import { withPrefix } from 'gatsby'
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div className="main-bg">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -37,7 +37,7 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="mask-icon"
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
-          color="#ff4400"
+          color="#0d0139"
         />
         <meta name="theme-color" content="#fff" />
 
