@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import MainBanner from '../components/Banner/MainBanner'
+import Image from '../img/flames.jpg'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -16,6 +18,14 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
+    <MainBanner
+      imageSrc={Image}
+      title="Teve aquela idéia de aplicativo, sistema ou página, mas não sabe como tirar do papel?"
+      subtitle="Entre em contato comigo e vamos torná-la real!"
+      customSubtitle
+      buttonText="Entrar em contato"
+      buttonLink="www.google.com.br"
+    />
     <div
       className="full-width-image margin-top-0"
       style={{

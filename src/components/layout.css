@@ -5,3 +5,33 @@
 .vertical-timeline::before {
   background: rgb(33, 150, 243) !important;
 }
+
+.custom-text {
+  background: -webkit-linear-gradient(45deg, #f441a5, #03a9f4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.custom-bg {
+  background: linear-gradient(90deg, rgb(3, 169, 244), rgb(244, 65, 165), rgb(255, 235, 59), rgb(3, 169, 244)) 0% 0% / 400%;
+}
+
+.cool-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, rgb(3, 169, 244), rgb(244, 65, 165), rgb(255, 235, 59), rgb(3, 169, 244)) 0% 0% / 400%;
+  transition: width .3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  /* transition: width .3s; */
+}
